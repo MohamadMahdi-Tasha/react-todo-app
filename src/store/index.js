@@ -25,7 +25,13 @@ const todoSlice = createSlice({
         todos: []
     },
     reducers: {
-        addTodo() {},
+        addTodo(state, action) {
+            state.todos.push({
+                name: action.payload,
+                isImportant: false,
+                isDone: false
+            })
+        },
         removeTodo() {},
         addImportant() {},
         removeImportant() {}
