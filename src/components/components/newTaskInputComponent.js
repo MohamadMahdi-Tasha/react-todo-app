@@ -1,7 +1,7 @@
 // Codes By Mahdi Tasha
 // Importing Part
 import React from 'react';
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { actions } from "../../store";
 import IconComponent from "./iconComponent";
 
@@ -9,6 +9,8 @@ import IconComponent from "./iconComponent";
 export default function NewTaskInputComponent() {
     // Using Dispatch To Work With Redux
     const dispatch = useDispatch();
+    const cds = useSelector(state => state);
+    const todos = cds.todos;
 
     // Creating Ref
     const inputRef = React.createRef();
@@ -17,7 +19,9 @@ export default function NewTaskInputComponent() {
     return(
         <form onSubmit={(event) => {
             event.preventDefault();
-            dispatch(actions.addTodo(inputRef.current.value))
+            if (!todos.find(item => item.name === inputRef.current.value)) {
+                dispatch(actions.addTodo(inputRef.current.value))
+            }
             inputRef.current.value = '';
         }} className='todo-app__new-task'>
             <button className='todo-app__new-task-btn'><IconComponent type={'plus'}/></button>

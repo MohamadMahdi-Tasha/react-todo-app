@@ -32,9 +32,11 @@ const todoSlice = createSlice({
                 isDone: false
             })
         },
-        removeTodo() {},
-        addImportant() {},
-        removeImportant() {}
+        removeTodo(state, actions) {state.todos = state.todos.filter(item => item.name !== actions.payload)},
+        addDone(state, actions) {state.todos.find(item => item.name === actions.payload).isDone = true},
+        removeDone(state, actions) {state.todos.find(item => item.name === actions.payload).isDone = false},
+        addImportant(state, actions) {state.todos.find(item => item.name === actions.payload).isImportant = true},
+        removeImportant(state, actions) {state.todos.find(item => item.name === actions.payload).isImportant = false}
     }
 })
 
