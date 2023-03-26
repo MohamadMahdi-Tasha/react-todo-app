@@ -1,7 +1,7 @@
 // Codes By Mahdi Tasha
 // Importing Part
 import TopSideComponent from "./components/topSideComponent";
-import NewTaskInputComponent from "./components/components/newTaskInputComponent";
+import BottomSideComponent from "./components/bottomSideComponent";
 
 // Exporting Whole App Which Is Functional Component As Default
 export default function App() {
@@ -9,7 +9,7 @@ export default function App() {
   return (
     <div>
         <TopSideComponent />
-        <NewTaskInputComponent />
+        <BottomSideComponent />
     </div>
   );
 }
