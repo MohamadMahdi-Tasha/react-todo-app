@@ -13,13 +13,6 @@ export default function BottomSideComponent() {
             <NewTaskInputComponent />
             <TasksHolderComponent>
                 <TaskComponent name={'test'}/>
-                <TaskComponent name={'test'}/>
-                <TaskComponent name={'test'}/>
-                <TaskComponent name={'test'}/>
-                <TaskComponent name={'test'}/>
-                <TaskComponent name={'test'}/>
-                <TaskComponent name={'test'}/>
-                <TaskComponent name={'test'}/>
             </TasksHolderComponent>
         </div>
     );
