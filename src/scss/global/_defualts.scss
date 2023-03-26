@@ -1,0 +1,17 @@
+// Codes By Mahdi Tasha
+// Importing Part
+@use "colors";
+@use "../utils/mixins";
+
+// Styles
+img {pointer-events: none}
+button {transition: .3s}
+a {text-decoration: none !important}
+ul,li,ol {list-style: none;}
+h1,h2,h3,h4,h5,h6 {margin: 0 !important;padding: 0 !important;}
+body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  background-color: colors.$light;
+  @include mixins.scrollbar;
+}

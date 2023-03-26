@@ -1,0 +1,16 @@
+// Codes BY Mahdi Tasha
+// Importing Part
+@use "../global/colors";
+
+// Styles
+@mixin scrollbar {
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: colors.$secondary;
+  }
+}
