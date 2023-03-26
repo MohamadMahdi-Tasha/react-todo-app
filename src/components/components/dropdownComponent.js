@@ -7,19 +7,19 @@ export default function DropdownComponent({type, children}) {
     // Conditional Rendering
     if (type === 'default') {
         return(
-            <div>
-                <button><IconComponent type={'dots'}/></button>
-                <ul>{children}</ul>
+            <div className='todo-app__dropdown-holder'>
+                <button className='todo-app__dropdown-toggler'><IconComponent type={'dots'}/></button>
+                <ul className='todo-app__dropdown'>{children}</ul>
             </div>
         );
     } else if(type === 'sort') {
         return(
-            <div>
-                <button><IconComponent type={'sort'} />Sort</button>
-                <ul>
-                    <li><button><IconComponent type={'star'} />Importance</button></li>
-                    <li><button><IconComponent type={'calender'}/>Default</button></li>
-                    <li><button><IconComponent type={'alphabetical-sort'} />Alphabetical</button></li>
+            <div className='todo-app__dropdown-holder'>
+                <button className='todo-app__dropdown-toggler'><IconComponent type={'sort'} />Sort</button>
+                <ul className='todo-app__dropdown'>
+                    <li className='todo-app__dropdown-li'><button className='todo-app__dropdown-btn'><IconComponent type={'star'} />Importance</button></li>
+                    <li className='todo-app__dropdown-li'><button className='todo-app__dropdown-btn'><IconComponent type={'calender'}/>Default</button></li>
+                    <li className='todo-app__dropdown-li'><button className='todo-app__dropdown-btn'><IconComponent type={'alphabetical-sort'} />Alphabetical</button></li>
                 </ul>
             </div>
         );

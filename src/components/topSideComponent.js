@@ -12,18 +12,18 @@ export default function TopSideComponent() {
 
     // Returning JSX
     return(
-        <div>
-            <div>
-                <div>
-                    <h6>
+        <div className='todo-app__top-side'>
+            <div className='todo-app__top-left-side'>
+                <div className='todo-app__top-title-holder'>
+                    <h6 className='todo-app__top-side-title'>
                         <IconComponent type={(dateState.isDay) ? 'sun' : 'moon'} />
                         My {(dateState.isDay) ? 'Day' : 'Night'}
                     </h6>
                     <DropdownComponent type={'default'}>
-                        <li><button>Print Items</button></li>
+                        <li className='todo-app__dropdown-li'><button className='todo-app__dropdown-btn'>Print Items</button></li>
                     </DropdownComponent>
                 </div>
-                <h6>{dateState.dayOfWeek},{dateState.monthName} {dateState.day}</h6>
+                <h6 className='todo-app__top-date'>{dateState.dayOfWeek},{dateState.monthName} {dateState.day}</h6>
             </div>
             <DropdownComponent type={'sort'}/>
         </div>

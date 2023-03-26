@@ -7,7 +7,7 @@ import BottomSideComponent from "./components/bottomSideComponent";
 export default function App() {
   // Returning JSX
   return (
-    <div>
+    <div className='todo-app'>
         <TopSideComponent />
         <BottomSideComponent />
     </div>
