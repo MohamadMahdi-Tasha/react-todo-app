@@ -6,10 +6,10 @@ import IconComponent from "./iconComponent";
 export default function TaskComponent({name}) {
     // Returning JSX
     return(
-        <div>
-            <input type="checkbox"/>
-            <p>{name}</p>
-            <button><IconComponent type={'star'}/></button>
+        <div className='todo-app__task'>
+            <input className='todo-app__task-checkbox' type="checkbox"/>
+            <p className='todo-app__task-title'>{name}</p>
+            <button className='todo-app__task-star-btn'><IconComponent type={'star'}/></button>
         </div>
     );
 }

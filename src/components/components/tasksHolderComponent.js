@@ -3,6 +3,6 @@
 export default function TasksHolderComponent({children}) {
     // Returning JSX
     return(
-        <ul>{children}</ul>
+        <ul className='todo-app__tasks-holder'>{children}</ul>
     );
 }
