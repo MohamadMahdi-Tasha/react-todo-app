@@ -36,7 +36,8 @@ const todoSlice = createSlice({
         addDone(state, actions) {state.todos.find(item => item.name === actions.payload).isDone = true},
         removeDone(state, actions) {state.todos.find(item => item.name === actions.payload).isDone = false},
         addImportant(state, actions) {state.todos.find(item => item.name === actions.payload).isImportant = true},
-        removeImportant(state, actions) {state.todos.find(item => item.name === actions.payload).isImportant = false}
+        removeImportant(state, actions) {state.todos.find(item => item.name === actions.payload).isImportant = false},
+        changeName(state, actions) {state.todos.find(item => item.name === actions.payload.name).name = actions.payload.changeTo}
     }
 })
 
