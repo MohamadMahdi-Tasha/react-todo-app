@@ -5,12 +5,13 @@
 // Styles
 @mixin scrollbar {
   &::-webkit-scrollbar {
-    width: 5px;
-    height: 5px;
+    width: 3px;
+    height: 3px;
     background-color: transparent;
   }
 
   &::-webkit-scrollbar-thumb {
     background-color: colors.$secondary;
+    border-radius: 40rem;
   }
 }

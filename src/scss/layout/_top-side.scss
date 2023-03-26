@@ -1,0 +1,40 @@
+// Codes By Mahdi Tasha
+// Importing Parts
+@use "../global/colors";
+
+// Styles
+.todo-app {
+  &__top-side {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__top-title-holder {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+    > .todo-app__dropdown-holder {margin-left: 16px;}
+  }
+
+  &__top-side-title {
+    color: colors.$secondary;
+    font-weight: 700;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+
+    > svg {
+      width: 25px;
+      height: 25px;
+      margin-right: 10px;
+    }
+  }
+
+  &__top-date {
+    color: colors.$secondary-lighter;
+    font-weight: 200;
+    font-size: 15px;
+  }
+}

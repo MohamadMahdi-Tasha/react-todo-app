@@ -5,10 +5,16 @@
 
 // Styles
 img {pointer-events: none}
-button {transition: .3s}
+button {transition: .3s;cursor: pointer;}
 a {text-decoration: none !important}
-ul,li,ol {list-style: none;}
 h1,h2,h3,h4,h5,h6 {margin: 0 !important;padding: 0 !important;}
+
+ul,li,ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   scroll-behavior: smooth;
   overflow-x: hidden;
