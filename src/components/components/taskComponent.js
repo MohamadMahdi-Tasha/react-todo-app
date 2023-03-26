@@ -9,7 +9,7 @@ export default function TaskComponent({name}) {
     return(
         <div className='todo-app__task'>
             <TaskCheckboxComponent />
-            <p className='todo-app__task-title'>{name}</p>
+            <input type="text" defaultValue={name} className='todo-app__task-input' />
             <button className='todo-app__task-star-btn'><IconComponent type={'star'}/></button>
         </div>
     );

@@ -1,0 +1,79 @@
+// Codes By Mahdi Tasha
+// Importing Parts
+@use "../global/colors";
+
+// Styles
+.todo-app {
+  &__new-task {
+    background-color: white;
+    display: flex;
+    margin-bottom: 15px;
+  }
+
+  &__new-task-btn {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    background-color: white;
+    border: none;
+    color: colors.$primary;
+  }
+
+  &__new-task-input {
+    width: 100%;
+    background-color: white;
+    border: none;
+    color: colors.$primary;
+    font-weight: 300;
+    outline-color: colors.$primary;
+    outline-width: 10px;
+
+    &::placeholder {
+      color: colors.$secondary-lighter;
+      font-weight: 200;
+    }
+  }
+
+  &__tasks-holder {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__task {
+    background-color: white;
+    display: flex;
+
+    & button {
+      width: 60px;
+      height: 60px;
+      color: colors.$primary;
+      background-color: transparent;
+      border: none;
+    }
+  }
+
+  &__task-left {
+    display: flex;
+    align-items: center;
+  }
+
+  &__task-input {
+    width: 100%;
+    background-color: white;
+    border: none;
+    color: colors.$primary;
+    font-weight: 300;
+    outline-color: colors.$primary;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    &::placeholder {
+      color: colors.$secondary-lighter;
+      font-weight: 200;
+    }
+  }
+}
